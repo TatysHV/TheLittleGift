@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Pacifico&family=Raleway:wght@300&display=swap&family=Sacramento&display=swap" rel="stylesheet">
+ 
+
+  <!-- Animated CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .slide-1{
+      display: flex;
+      flex-flow: column;
+      background-color:#f48fb1 ;
+    }
+
+    .slide-2{
+      display: flex;
+      flex-flow: column;
+      background-color: #fff3e0;
+    }
+
+    .slide-3{
+      display: flex;
+      flex-flow: column;
+      background-color: #81d4fa;
+    }
+
+    .slide-4{
+      display: flex;
+      flex-flow: column;
+      background-color: #80cbc4;
+    }
+
+    .slide-5{
+      display: flex; 
+      flex-flow: column;
+      background-color: #b39ddb;
+    }
+
+    .slide-7{
+      display: flex; 
+      flex-flow: column;
+      background-color: #f48fb1;
+    }
+
+    .slide-6{
+      display: flex; 
+      flex-flow: column;
+      background-color: #80cbc4;
+    }
+
+    .circle-1{
+      position: absolute;
+      background-color: #f06292 ;
+      width: 80vw; 
+      height: 80vw;
+      /*animation: heartBeat;
+      animation-duration: 2.5s; 
+      animation-iteration-count: infinite;*/
+    }
+
+    .heart{
+      width: 50%;
+      animation: heartBeat;
+      animation-duration: 2.5s; 
+      animation-iteration-count: infinite;
+    }
+
+    .circle-2{
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-content: center;
+      position: absolute;
+      border-radius: 100%;
+      width: 70vw; 
+      height: 70vw;
+      background-color: #ffb4cc;
+      /*background-color: #ec407a;*/
+    }
+
+    .circle span{
+      margin: auto; 
+      text-align: center;
+      color: white;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #e91e63;
+      
+    }
+
+    .title{
+      font-family: 'Pacifico';
+      font-size: 2em;
+      position: absolute;
+      top: 8vh;
+      color: white;
+    }
+
+    .subtittle{
+      font-size: 1.8em;
+      position: absolute;
+      bottom: 8vh;
+      color: white;
+    }
+
+    .pagraph-slide-2{
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.8em;
+      padding: 0 8%;
+      color: #3e2723;
+    }
+    .pagraph-slide-3{
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.8em;
+      padding: 0 8%;
+      color: #372959;
+    }
+
+    .pagraph-slide-4{
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.8em;
+      padding: 0 8%;
+      color: #003530;
+    }
+
+    .pagraph-slide-5{
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.8em;
+      padding: 0 8%;
+      color: #220023;
+    }
+
+    .pagraph-slide-7{
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.8em;
+      padding: 0 8%;
+      color: white;
+    }
+
+    .pagraph-slide-6{
+      font-family: 'Amatic SC', cursive;
+      font-size: 1.8em;
+      padding: 0 8%;
+      color: white;
+    }
+
+    .pagraph-slide-7 span{
+      font-family: 'Pacifico', cursive;
+      font-size: 1.2em;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide-1">
+        <p class="title" style="font-family: 'Pacifico', sans-serif;">The little gift...</p>
+        <div class="circle circle-1 animate__repeat-5"></div>
+        <div class="circle circle-2">
+          <img class="heart" src="heart.svg"></img>
+        </div>
+        <p class="subtittle" style="font-family: 'Amatic SC', cursive;">Para Brenn Sharky</p>
+      </div>
+      <div class="swiper-slide slide-2">
+        <p class="pagraph-slide-2">
+        Algunos escriben cartas, otros regalan flores y chocolates...<br><br>
+        Yo quise darte algo un poco más original y pensé en compartirte un pedacito de mí. 
+        <br><br>
+        Primero me gustaría hablar un poco de la chica a quien yo quiero tanto.<br><br>
+      </p>
+
+      </div>
+      <div class="swiper-slide slide-3">
+        <p class="pagraph-slide-3">A la chica que quiero tanto le encanta jugar ajedrez y disfruta mucho pasar el rato leyendo algún libro, y claro... qué mejor que leer un libro sobre ajedrez y así aprender a salvarse del mate de reina y alfil.</p>
+        <img src="chess.svg" style="width: 35%"></img>
+      </div>
+      <div class="swiper-slide slide-4">
+        <p class="pagraph-slide-4">También me encanta pasar tiempo con ella, nos divertimos muchísimo jugando nuestros juegos favoritos.<br><br>Aunque no siempre ganemos, para mí, jugar a su lado siempre será como ganar el mejor de los trofeos.</p>
+        <img src="competition.svg" style="width: 35%"></img>
+      </div>
+      <div class="swiper-slide slide-5">
+        <p class="pagraph-slide-5">Además jamás podríamos rechazar una buena taza de café. Basta un momento junto a ella disfrutando del sabor y aroma de esta deliciosa bebida para que se me reinicie por completo la vida. </p>
+        <img src="coffee-cup.svg" style="width: 35%"></img>
+      </div>
+      <div class="swiper-slide slide-6">
+        <p class="pagraph-slide-6">Por eso y mucho más quiero decirte que eres muy especial para mí. Espero que podamos seguir compartiendo más aventuras juntas y más tazas de café. <br><br><span style="font-size: 1.4em;">Te quiero mucho</span></p>
+        <img src="gift-box.svg" style="width: 35%"></img>
+      </div>
+      <div class="swiper-slide slide-7">
+        <p class="pagraph-slide-7">Para ti con mucho cariño:<br><br><span>My little gift</span><br></br>de: Taty Sharky<br></p>
+        
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="../package/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
+
+</html>
